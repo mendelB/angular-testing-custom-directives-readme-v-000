@@ -12,6 +12,11 @@ function Counter() {
 		},
 		link: function (scope, element) {
 			element.on('click', function () {
+
+				if (scope.count === 10) {
+					alert('Say whaaaat!')
+				}
+				
 				scope.count++;
 
 				scope.$apply();

@@ -14,4 +14,15 @@ describe('Directive Test', function() {
 		expect(count.getInnerHtml()).toEqual('Current count: 1');
 	});
 
+	it('whould alert the user when the count is over 10', function(){
+		for (var i=0; i<10; i++) {
+			counter.click();
+		}
+
+		var alertDialog = browser.switchTo().alert();
+
+		expect(alertDialog.getText()).toEqual('Say whaaaat!');
+
+	});
+
 });
